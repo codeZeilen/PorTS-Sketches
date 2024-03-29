@@ -55,8 +55,8 @@
 				((write-only-file (open "my-test-file" "w"))) 
 				(assert (is-file-error? (read write-only-file 1)))))
 
-		(capability 'read-binary-or-character 
-			(placeholder (read-binary-or-text))
+		(capability 'read-binary-or-text
+			(placeholder (read-binary-or-text file-descriptor length binary-or-text))
 			
 			(test "read binary mode returns number" ...)
 			
